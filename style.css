@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+section {
+	width: 100%;
+	height: 100vh;
+	background: rgb(39, 41, 68);
+	font-family: sans-serif;
+	color: rgb(243, 241, 239);
+}
+.score {
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.score h2 {
+	text-transform: capitalize;
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+.score p {
+	text-align: center;
+	padding: 10px;
+	font-size: 25px;
+}
+
+.intro {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	transition: opacity 0.5s ease;
+}
+.intro h1 {
+	font-size: 50px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+.intro button,
+.match button {
+	width: 150px;
+	height: 50px;
+	background: none;
+	border: none;
+	color: rgb(243, 241, 239);
+	font-size: 20px;
+	background-color: rgb(45, 117, 96);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 8px;
+	border-radius: 7px;
+	cursor: pointer;
+	outline: none;
+	font-weight: bold;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+	transition: all 0.5s ease;
+}
+.intro button:hover,
+.match button:hover {
+	background: rgb(243, 241, 239);
+	color: rgb(45, 117, 96);
+}
+
+.match {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease 0.5s;
+}
+.winner {
+	color: rgb(243, 241, 239);
+	font-size: 50px;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: 3px;
+}
+.hands,
+.options {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.player__hand {
+	transform: rotateY(180deg);
+}
+div.fadeOut {
+	opacity: 0;
+	pointer-events: none;
+}
+div.fadeIn {
+	opacity: 1;
+	pointer-events: all;
+}
+.footer__info {
+	width: 100%;
+	margin-top: auto;
+	background-color: red;
+	padding: 20px;
+	text-align: center;
+	color: rgb(243, 241, 239);
+	letter-spacing: 3px;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+@keyframes shakePlayerHands {
+	0% {
+		transform: rotateY(180deg) translateY(0%);
+	}
+	15% {
+		transform: rotateY(180deg) translateY(-30%);
+	}
+	25% {
+		transform: rotateY(180deg) translateY(0%);
+	}
+	35% {
+		transform: rotateY(180deg) translateY(-30%);
+	}
+	50% {
+		transform: rotateY(180deg) translateY(0%);
+	}
+	65% {
+		transform: rotateY(180deg) translateY(-30%);
+	}
+	75% {
+		transform: rotateY(180deg) translateY(0%);
+	}
+	85% {
+		transform: rotateY(180deg) translateY(-30%);
+	}
+	100% {
+		transform: rotateY(180deg) translateY(0%);
+	}
+}
+@keyframes shakeComputerHands {
+	0% {
+		transform: translateY(0%);
+	}
+	15% {
+		transform: translateY(-30%);
+	}
+	25% {
+		transform: translateY(0%);
+	}
+	35% {
+		transform: translateY(-30%);
+	}
+	50% {
+		transform: translateY(0%);
+	}
+	65% {
+		transform: translateY(-30%);
+	}
+	75% {
+		transform: translateY(0%);
+	}
+	85% {
+		transform: translateY(-30%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@media (max-width: 760px) {
+	section {
+		width: 100%;
+		height: 150vh;
+	}
+	.intro {
+		height: 50%;
+		align-items: center;
+		justify-content: center;
+	}
+	.intro h1 {
+		font-size: 50px;
+		padding: 20px;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	.winner {
+		font-size: 50px;
+		margin-top: 80px;
+	}
+	.hands {
+		width: 100%;
+		height: 40vh;
+	}
+	.hands img {
+		width: 50%;
+		height: 50%;
+	}
+	.match {
+		width: 100%;
+	}
+
+	.options button {
+		width: auto;
+		font-size: 20px;
+	}
+}
