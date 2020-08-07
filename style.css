@@ -185,6 +185,7 @@ div.fadeIn {
 		height: 100vh;
 	}
 	.footer--sec {
+		position: fixed;
 		bottom: 0;
 		padding: 1px;
 	}
