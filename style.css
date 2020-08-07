@@ -10,6 +10,7 @@ section {
 	background: rgb(39, 41, 68);
 	font-family: sans-serif;
 	color: rgb(243, 241, 239);
+	position: relative;
 }
 .score {
 	height: 20vh;
