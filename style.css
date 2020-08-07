@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
 }
 section {
 	width: 100%;
@@ -96,16 +97,24 @@ div.fadeIn {
 	opacity: 1;
 	pointer-events: all;
 }
-.footer__info {
+
+.footer--sec {
 	width: 100%;
-	margin-top: auto;
-	background-color: red;
-	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	height: auto;
+	padding: 8px;
+	background-color: rgb(32, 133, 99);
+}
+.footer--info {
 	text-align: center;
-	color: rgb(243, 241, 239);
+	color: rgb(250, 247, 243);
 	letter-spacing: 3px;
-	font-size: 18px;
+	font-size: 15px;
 	text-transform: capitalize;
+}
+.developer {
+	font-size: 20px;
 }
 
 @keyframes shakePlayerHands {
@@ -168,10 +177,13 @@ div.fadeIn {
 }
 
 @media (max-width: 760px) {
-	section {
-		width: 100%;
-		height: 150vh;
+	.footer--info {
+		font-size: 14px;
 	}
+	.developer {
+		font-size: 17px;
+	}
+
 	.intro {
 		height: 50%;
 		align-items: center;

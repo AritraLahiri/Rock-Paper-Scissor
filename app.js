@@ -38,11 +38,11 @@ const game = () => {
 					const rivalIndex = Math.floor(Math.random() * 3);
 					const rivalChoose = rivalOptions[rivalIndex];
 
-					compareHands(this.textContent, rivalChoose);
-
 					// updating Images
 					playerHand.src = `./assets/${this.textContent.toLowerCase()}.png `;
 					rivalHand.src = `./assets/${rivalChoose.toLowerCase()}.png `;
+
+					compareHands(this.textContent, rivalChoose);
 				}, 2000);
 
 				playerHand.src = `./assets/rock.png `;
