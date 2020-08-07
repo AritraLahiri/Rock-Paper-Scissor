@@ -4,13 +4,13 @@
 	box-sizing: border-box;
 	font-family: 'Nunito', sans-serif;
 }
+
 section {
 	width: 100%;
 	height: 100vh;
 	background: rgb(39, 41, 68);
 	font-family: sans-serif;
 	color: rgb(243, 241, 239);
-	position: relative;
 }
 .score {
 	height: 20vh;
@@ -178,6 +178,16 @@ div.fadeIn {
 }
 
 @media (max-width: 760px) {
+	body {
+		overflow: hidden;
+	}
+	section {
+		height: 100vh;
+	}
+	.footer--sec {
+		bottom: 0;
+		padding: 1px;
+	}
 	.footer--info {
 		font-size: 14px;
 	}
@@ -194,7 +204,7 @@ div.fadeIn {
 		font-size: 50px;
 		padding: 20px;
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: 50px;
 	}
 	.winner {
 		font-size: 50px;
@@ -202,11 +212,11 @@ div.fadeIn {
 	}
 	.hands {
 		width: 100%;
-		height: 40vh;
+		height: 20vh;
 	}
 	.hands img {
 		width: 50%;
-		height: 50%;
+		height: 100%;
 	}
 	.match {
 		width: 100%;
